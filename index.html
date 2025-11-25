@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Auto Detailing - Professional Car Wash Services</title>
+    <title>CBR Mobile Detailing - We Come To You | Professional Car Wash</title>
     <style>
         * {
             margin: 0;
@@ -16,6 +16,7 @@
             line-height: 1.6;
             color: #1a1a1a;
             overflow-x: hidden;
+            background: #f5f5f5;
         }
 
         /* Header */
@@ -27,8 +28,8 @@
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
-            border-bottom: 1px solid rgba(0,0,0,0.05);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            border-bottom: 1px solid rgba(30, 58, 138, 0.2);
         }
 
         nav {
@@ -43,7 +44,7 @@
         .logo {
             font-size: 1.5rem;
             font-weight: 700;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #3b82f6 0%, #1e3a8a 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -65,11 +66,11 @@
         }
 
         .nav-links a:hover {
-            color: #667eea;
+            color: #3b82f6;
         }
 
         .book-btn {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #3b82f6 0%, #1e3a8a 100%);
             color: white !important;
             padding: 0.7rem 1.8rem;
             border-radius: 50px;
@@ -78,12 +79,12 @@
 
         .book-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
             color: white;
             padding: 180px 3rem 120px;
             text-align: center;
@@ -98,8 +99,8 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 80%, rgba(255,255,255,0.1) 0%, transparent 50%);
+            background: radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.15) 0%, transparent 50%);
         }
 
         .hero-content {
@@ -136,8 +137,8 @@
         }
 
         .cta-button {
-            background: white;
-            color: #667eea;
+            background: linear-gradient(135deg, #3b82f6 0%, #1e3a8a 100%);
+            color: white;
             padding: 1.2rem 3rem;
             border: none;
             border-radius: 50px;
@@ -152,13 +153,13 @@
 
         .cta-button:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.4);
         }
 
         /* Services Overview */
         .services-overview {
             padding: 100px 3rem;
-            background: #f8f9fa;
+            background: #e8e8e8;
         }
 
         .services-overview h2 {
@@ -172,7 +173,7 @@
         .services-subtitle {
             text-align: center;
             font-size: 1.2rem;
-            color: #666;
+            color: #4b5563;
             margin-bottom: 4rem;
         }
 
@@ -188,14 +189,15 @@
             background: white;
             padding: 3rem 2.5rem;
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             transition: all 0.3s;
-            border: 1px solid rgba(0,0,0,0.05);
+            border: 1px solid rgba(59, 130, 246, 0.2);
         }
 
         .service-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+            box-shadow: 0 20px 50px rgba(59, 130, 246, 0.2);
+            border-color: #3b82f6;
         }
 
         .service-icon {
@@ -205,21 +207,21 @@
         }
 
         .service-card h3 {
-            color: #667eea;
+            color: #1e3a8a;
             margin-bottom: 1rem;
             font-size: 1.6rem;
             font-weight: 700;
         }
 
         .service-card p {
-            color: #555;
+            color: #4b5563;
             line-height: 1.8;
         }
 
         /* Pricing Section */
         .pricing {
             padding: 100px 3rem;
-            background: white;
+            background: #f5f5f5;
         }
 
         .pricing h2 {
@@ -233,7 +235,7 @@
         .pricing-subtitle {
             text-align: center;
             font-size: 1.2rem;
-            color: #666;
+            color: #4b5563;
             margin-bottom: 4rem;
         }
 
@@ -247,7 +249,7 @@
 
         .price-card {
             background: white;
-            border: 2px solid #e9ecef;
+            border: 2px solid rgba(59, 130, 246, 0.2);
             padding: 3rem;
             border-radius: 20px;
             transition: all 0.3s;
@@ -256,25 +258,41 @@
 
         .price-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
-            border-color: #667eea;
+            box-shadow: 0 20px 50px rgba(59, 130, 246, 0.2);
+            border-color: #3b82f6;
         }
 
         .price-card.featured {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border: none;
+            background: white;
+            color: #1a1a1a;
+            border: 3px solid #3b82f6;
             transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(59, 130, 246, 0.3);
         }
 
         .price-card.featured:hover {
             transform: scale(1.08) translateY(-10px);
         }
+        
+        .price-card.featured h3,
+        .price-card.featured .vehicle-type,
+        .price-card.featured .price-subtext,
+        .price-card.featured li {
+            color: inherit;
+        }
+        
+        .price-card.featured .features-section h4 {
+            color: #1e3a8a;
+        }
+        
+        .price-card.featured li:before {
+            color: #3b82f6;
+        }
 
         .package-badge {
             display: inline-block;
-            background: rgba(102, 126, 234, 0.1);
-            color: #667eea;
+            background: rgba(59, 130, 246, 0.2);
+            color: #1e3a8a;
             padding: 0.4rem 1rem;
             border-radius: 50px;
             font-size: 0.85rem;
@@ -284,33 +302,35 @@
             letter-spacing: 1px;
         }
 
-        .price-card.featured .package-badge {
-            background: rgba(255,255,255,0.2);
-            color: white;
-        }
-
         .price-card h3 {
             font-size: 2rem;
             margin-bottom: 0.5rem;
             font-weight: 800;
+            color: #1a1a1a;
         }
 
         .vehicle-type {
             font-size: 0.95rem;
             opacity: 0.8;
             margin-bottom: 1.5rem;
+            color: #4b5563;
         }
 
         .price {
             font-size: 4rem;
             font-weight: 800;
             margin: 1.5rem 0;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .price-subtext {
             font-size: 0.9rem;
             opacity: 0.7;
             margin-bottom: 2rem;
+            color: #4b5563;
         }
 
         .features-section {
@@ -321,11 +341,7 @@
             font-size: 1.1rem;
             margin-bottom: 1rem;
             font-weight: 700;
-            color: #667eea;
-        }
-
-        .price-card.featured .features-section h4 {
-            color: white;
+            color: #1e3a8a;
         }
 
         .price-card ul {
@@ -335,32 +351,25 @@
 
         .price-card li {
             padding: 0.7rem 0;
-            border-bottom: 1px solid rgba(0,0,0,0.06);
+            border-bottom: 1px solid rgba(0,0,0,0.08);
             display: flex;
             align-items: flex-start;
             font-size: 0.95rem;
-        }
-
-        .price-card.featured li {
-            border-bottom: 1px solid rgba(255,255,255,0.15);
+            color: #4b5563;
         }
 
         .price-card li:before {
             content: "✓";
-            color: #667eea;
+            color: #1e3a8a;
             font-weight: bold;
             margin-right: 0.8rem;
             font-size: 1.2rem;
             flex-shrink: 0;
         }
 
-        .price-card.featured li:before {
-            color: white;
-        }
-
         .book-package-btn {
             width: 100%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #3b82f6 0%, #1e3a8a 100%);
             color: white;
             padding: 1.2rem;
             border: none;
@@ -372,20 +381,15 @@
             margin-top: 2rem;
         }
 
-        .price-card.featured .book-package-btn {
-            background: white;
-            color: #667eea;
-        }
-
         .book-package-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
         }
 
         /* Extras Section */
         .extras {
             padding: 100px 3rem;
-            background: #f8f9fa;
+            background: #e8e8e8;
         }
 
         .extras h2 {
@@ -399,7 +403,7 @@
         .extras-subtitle {
             text-align: center;
             font-size: 1.2rem;
-            color: #666;
+            color: #4b5563;
             margin-bottom: 4rem;
         }
 
@@ -415,16 +419,18 @@
             background: white;
             padding: 2rem;
             border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
             display: flex;
             justify-content: space-between;
             align-items: center;
             transition: all 0.3s;
+            border: 1px solid rgba(59, 130, 246, 0.2);
         }
 
         .extra-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
+            border-color: #3b82f6;
         }
 
         .extra-info h4 {
@@ -435,19 +441,35 @@
 
         .extra-info p {
             font-size: 0.9rem;
-            color: #666;
+            color: #4b5563;
+        }box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+            border-color: #3b82f6;
+        }
+
+        .extra-info h4 {
+            font-size: 1.2rem;
+            color: #e0e0e0;
+            margin-bottom: 0.3rem;
+        }
+
+        .extra-info p {
+            font-size: 0.9rem;
+            color: #9ca3af;
         }
 
         .extra-price {
             font-size: 2rem;
             font-weight: 800;
-            color: #667eea;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         /* Contact Section */
         .contact {
             padding: 100px 3rem;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
             color: white;
             text-align: center;
         }
@@ -467,17 +489,18 @@
         }
 
         .contact-item {
-            background: rgba(255,255,255,0.15);
+            background: rgba(59, 130, 246, 0.15);
             padding: 3rem 2rem;
             border-radius: 20px;
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.2);
+            border: 1px solid rgba(59, 130, 246, 0.3);
             transition: all 0.3s;
         }
 
         .contact-item:hover {
-            background: rgba(255,255,255,0.2);
+            background: rgba(59, 130, 246, 0.25);
             transform: translateY(-5px);
+            border-color: #3b82f6;
         }
 
         .contact-item h3 {
@@ -493,14 +516,16 @@
 
         /* Footer */
         footer {
-            background: #1a1a1a;
+            background: #2d3748;
             color: white;
             text-align: center;
             padding: 3rem;
+            border-top: 1px solid rgba(59, 130, 246, 0.2);
         }
 
         footer p {
-            opacity: 0.8;
+            opacity: 0.9;
+            color: #e0e0e0;
         }
 
         /* Mobile Menu */
@@ -567,7 +592,7 @@
 <body>
     <header>
         <nav>
-            <div class="logo">🚗 Premium Auto Detailing</div>
+            <div class="logo">🚗 CBR Mobile Detailing</div>
             <button class="mobile-menu-btn">☰</button>
             <ul class="nav-links">
                 <li><a href="#services">Services</a></li>
@@ -581,15 +606,15 @@
 
     <section class="hero">
         <div class="hero-content">
-            <h1>Professional Auto Detailing</h1>
-            <p>Premium car care services with meticulous attention to detail. Transform your vehicle inside and out.</p>
-            <a href="#pricing" class="cta-button">View Packages</a>
+            <h1>Mobile Auto Detailing</h1>
+            <p>Premium car care services that come to you. Professional detailing at your home, office, or anywhere convenient.</p>
+            <a href="#pricing" class="cta-button">Book Mobile Service</a>
         </div>
     </section>
 
     <section id="services" class="services-overview">
         <h2>What We Offer</h2>
-        <p class="services-subtitle">Complete interior and exterior detailing services</p>
+        <p class="services-subtitle">Complete mobile detailing services - we bring everything to you</p>
         <div class="services-grid">
             <div class="service-card">
                 <span class="service-icon">✨</span>
@@ -617,16 +642,16 @@
                 <p>Ceramic wax coating and paint correction services to protect your vehicle's finish and maintain that showroom shine.</p>
             </div>
             <div class="service-card">
-                <span class="service-icon">🌿</span>
-                <h3>Odor Elimination</h3>
-                <p>Professional odor removal treatment to eliminate smoke, pet, mildew, and other persistent odors from your vehicle.</p>
+                <span class="service-icon">🚗</span>
+                <h3>Mobile Convenience</h3>
+                <p>We come to your home, office, or any location. No need to drive anywhere - we bring professional detailing directly to you with all equipment and supplies.</p>
             </div>
         </div>
     </section>
 
     <section id="pricing" class="pricing">
-        <h2>Our Packages</h2>
-        <p class="pricing-subtitle">Choose the perfect package for your vehicle</p>
+        <h2>Our Mobile Packages</h2>
+        <p class="pricing-subtitle">Professional detailing at your location - Choose the perfect package</p>
         <div class="pricing-grid">
             <div class="price-card">
                 <span class="package-badge">Basic</span>
@@ -784,15 +809,16 @@
     </section>
 
     <section id="contact" class="contact">
-        <h2>Ready to Book?</h2>
+        <h2>Book Your Mobile Detail</h2>
+        <p style="font-size: 1.2rem; margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">We come to you! Professional detailing at your home, office, or preferred location.</p>
         <div class="contact-info">
             <div class="contact-item">
-                <h3>📍 Location</h3>
-                <p>123 Main Street<br>Your City, ST 12345</p>
+                <h3>📱 Call or Text</h3>
+                <p>(951) 768-8137</p>
             </div>
             <div class="contact-item">
-                <h3>📞 Phone</h3>
-                <p>(555) 123-4567</p>
+                <h3>📍 Service Area</h3>
+                <p>Anaheim & Surrounding Areas<br>We come to your location!</p>
             </div>
             <div class="contact-item">
                 <h3>⏰ Hours</h3>
@@ -802,7 +828,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 Premium Auto Detailing. All rights reserved. Professional car care services.</p>
+        <p>&copy; 2024 CBR Mobile Detailing. All rights reserved. Mobile car care services - We come to you!</p>
     </footer>
 
     <script>
@@ -843,4 +869,4 @@
         });
     </script>
 </body>
-</html>w
+</html>

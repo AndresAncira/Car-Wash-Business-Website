@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Car Wash - Shine Like New</title>
+    <title>Premium Auto Detailing - Professional Car Wash Services</title>
     <style>
         * {
             margin: 0;
@@ -12,61 +12,80 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: #1a1a1a;
             overflow-x: hidden;
         }
 
         /* Header */
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
             padding: 1rem 0;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
         }
 
         nav {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 2rem;
+            padding: 0 3rem;
         }
 
         .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 3rem;
+            align-items: center;
         }
 
         .nav-links a {
-            color: white;
+            color: #1a1a1a;
             text-decoration: none;
-            transition: opacity 0.3s;
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 0.95rem;
         }
 
         .nav-links a:hover {
-            opacity: 0.8;
+            color: #667eea;
+        }
+
+        .book-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white !important;
+            padding: 0.7rem 1.8rem;
+            border-radius: 50px;
+            font-weight: 600;
+        }
+
+        .book-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
         }
 
         /* Hero Section */
         .hero {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 150px 2rem 100px;
+            padding: 180px 3rem 120px;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -79,32 +98,29 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,144C960,149,1056,139,1152,128C1248,117,1344,107,1392,101.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
-            background-size: cover;
-            animation: wave 10s ease-in-out infinite;
-        }
-
-        @keyframes wave {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
+            background: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(255,255,255,0.1) 0%, transparent 50%);
         }
 
         .hero-content {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             position: relative;
             z-index: 1;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+            line-height: 1.2;
             animation: fadeInUp 1s ease;
         }
 
         .hero p {
             font-size: 1.3rem;
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
             animation: fadeInUp 1s ease 0.2s backwards;
         }
 
@@ -122,190 +138,400 @@
         .cta-button {
             background: white;
             color: #667eea;
-            padding: 1rem 2.5rem;
+            padding: 1.2rem 3rem;
             border: none;
             border-radius: 50px;
             font-size: 1.1rem;
-            font-weight: bold;
+            font-weight: 700;
             cursor: pointer;
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: all 0.3s;
             text-decoration: none;
             display: inline-block;
             animation: fadeInUp 1s ease 0.4s backwards;
         }
 
         .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
         }
 
-        /* Services Section */
-        .services {
-            padding: 80px 2rem;
+        /* Services Overview */
+        .services-overview {
+            padding: 100px 3rem;
             background: #f8f9fa;
         }
 
-        .services h2 {
+        .services-overview h2 {
             text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #667eea;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+            font-weight: 800;
+        }
+
+        .services-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 4rem;
         }
 
         .services-grid {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
         }
 
         .service-card {
             background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            text-align: center;
+            padding: 3rem 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            transition: all 0.3s;
+            border: 1px solid rgba(0,0,0,0.05);
         }
 
         .service-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.12);
         }
 
         .service-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            display: block;
         }
 
         .service-card h3 {
             color: #667eea;
             margin-bottom: 1rem;
-            font-size: 1.5rem;
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+
+        .service-card p {
+            color: #555;
+            line-height: 1.8;
         }
 
         /* Pricing Section */
         .pricing {
-            padding: 80px 2rem;
+            padding: 100px 3rem;
             background: white;
         }
 
         .pricing h2 {
             text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #667eea;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+            font-weight: 800;
+        }
+
+        .pricing-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 4rem;
         }
 
         .pricing-grid {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
         }
 
         .price-card {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            padding: 2.5rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-            text-align: center;
+            background: white;
+            border: 2px solid #e9ecef;
+            padding: 3rem;
+            border-radius: 20px;
+            transition: all 0.3s;
+            position: relative;
         }
 
         .price-card:hover {
-            transform: scale(1.05);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+            border-color: #667eea;
         }
 
         .price-card.featured {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
+            border: none;
             transform: scale(1.05);
         }
 
-        .price-card h3 {
-            font-size: 1.8rem;
+        .price-card.featured:hover {
+            transform: scale(1.08) translateY(-10px);
+        }
+
+        .package-badge {
+            display: inline-block;
+            background: rgba(102, 126, 234, 0.1);
+            color: #667eea;
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
             margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .price-card.featured .package-badge {
+            background: rgba(255,255,255,0.2);
+            color: white;
+        }
+
+        .price-card h3 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 800;
+        }
+
+        .vehicle-type {
+            font-size: 0.95rem;
+            opacity: 0.8;
+            margin-bottom: 1.5rem;
         }
 
         .price {
-            font-size: 3rem;
-            font-weight: bold;
-            margin: 1rem 0;
+            font-size: 4rem;
+            font-weight: 800;
+            margin: 1.5rem 0;
+        }
+
+        .price-subtext {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            margin-bottom: 2rem;
+        }
+
+        .features-section {
+            margin: 2rem 0;
+        }
+
+        .features-section h4 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            color: #667eea;
+        }
+
+        .price-card.featured .features-section h4 {
+            color: white;
         }
 
         .price-card ul {
             list-style: none;
-            margin: 2rem 0;
-            text-align: left;
+            margin: 0;
         }
 
         .price-card li {
-            padding: 0.5rem 0;
-            border-bottom: 1px solid rgba(0,0,0,0.1);
+            padding: 0.7rem 0;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+            display: flex;
+            align-items: flex-start;
+            font-size: 0.95rem;
         }
 
         .price-card.featured li {
-            border-bottom: 1px solid rgba(255,255,255,0.2);
+            border-bottom: 1px solid rgba(255,255,255,0.15);
         }
 
         .price-card li:before {
-            content: "✓ ";
+            content: "✓";
             color: #667eea;
             font-weight: bold;
-            margin-right: 0.5rem;
+            margin-right: 0.8rem;
+            font-size: 1.2rem;
+            flex-shrink: 0;
         }
 
         .price-card.featured li:before {
             color: white;
         }
 
+        .book-package-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 2rem;
+        }
+
+        .price-card.featured .book-package-btn {
+            background: white;
+            color: #667eea;
+        }
+
+        .book-package-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        /* Extras Section */
+        .extras {
+            padding: 100px 3rem;
+            background: #f8f9fa;
+        }
+
+        .extras h2 {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+            font-weight: 800;
+        }
+
+        .extras-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 4rem;
+        }
+
+        .extras-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .extra-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s;
+        }
+
+        .extra-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .extra-info h4 {
+            font-size: 1.2rem;
+            color: #1a1a1a;
+            margin-bottom: 0.3rem;
+        }
+
+        .extra-info p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .extra-price {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #667eea;
+        }
+
         /* Contact Section */
         .contact {
-            padding: 80px 2rem;
+            padding: 100px 3rem;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             text-align: center;
         }
 
         .contact h2 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin-bottom: 2rem;
+            font-weight: 800;
         }
 
         .contact-info {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
         }
 
         .contact-item {
-            background: rgba(255,255,255,0.1);
-            padding: 2rem;
-            border-radius: 10px;
+            background: rgba(255,255,255,0.15);
+            padding: 3rem 2rem;
+            border-radius: 20px;
             backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s;
+        }
+
+        .contact-item:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-5px);
         }
 
         .contact-item h3 {
             margin-bottom: 1rem;
-            font-size: 1.3rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .contact-item p {
+            font-size: 1.1rem;
+            line-height: 1.8;
         }
 
         /* Footer */
         footer {
-            background: #2d3748;
+            background: #1a1a1a;
             color: white;
             text-align: center;
-            padding: 2rem;
+            padding: 3rem;
         }
 
-        @media (max-width: 768px) {
+        footer p {
+            opacity: 0.8;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #1a1a1a;
+        }
+
+        @media (max-width: 968px) {
+            nav {
+                padding: 0 1.5rem;
+            }
+
+            .hero {
+                padding: 150px 1.5rem 80px;
+            }
+
             .hero h1 {
                 font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .mobile-menu-btn {
+                display: block;
             }
 
             .nav-links {
@@ -313,8 +539,27 @@
             }
 
             .services-grid,
-            .pricing-grid {
+            .pricing-grid,
+            .extras-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .price-card.featured {
+                transform: scale(1);
+            }
+
+            .services-overview,
+            .pricing,
+            .extras,
+            .contact {
+                padding: 60px 1.5rem;
+            }
+
+            .services-overview h2,
+            .pricing h2,
+            .extras h2,
+            .contact h2 {
+                font-size: 2rem;
             }
         }
     </style>
@@ -322,103 +567,224 @@
 <body>
     <header>
         <nav>
-            <div class="logo">✨ Shine Wash</div>
+            <div class="logo">🚗 Premium Auto Detailing</div>
+            <button class="mobile-menu-btn">☰</button>
             <ul class="nav-links">
                 <li><a href="#services">Services</a></li>
                 <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#extras">Add-Ons</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" class="book-btn">Book Now</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="hero">
         <div class="hero-content">
-            <h1>Your Car Deserves to Shine</h1>
-            <p>Premium car wash services that bring back that showroom sparkle. Fast, eco-friendly, and affordable.</p>
-            <a href="#pricing" class="cta-button">View Our Packages</a>
+            <h1>Professional Auto Detailing</h1>
+            <p>Premium car care services with meticulous attention to detail. Transform your vehicle inside and out.</p>
+            <a href="#pricing" class="cta-button">View Packages</a>
         </div>
     </section>
 
-    <section id="services" class="services">
-        <h2>Our Services</h2>
+    <section id="services" class="services-overview">
+        <h2>What We Offer</h2>
+        <p class="services-subtitle">Complete interior and exterior detailing services</p>
         <div class="services-grid">
             <div class="service-card">
-                <div class="service-icon">🚗</div>
-                <h3>Exterior Wash</h3>
-                <p>Complete exterior cleaning with premium soap and wax protection. Your car will gleam in the sun!</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">✨</div>
+                <span class="service-icon">✨</span>
                 <h3>Interior Detailing</h3>
-                <p>Deep cleaning of seats, carpets, dashboard, and all interior surfaces. Fresh and spotless inside.</p>
+                <p>Deep cleaning of all interior surfaces including upholstery, carpets, dashboard, and door panels. Steam cleaning and leather conditioning available.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">💎</div>
-                <h3>Premium Polish</h3>
-                <p>Professional polishing and waxing that protects your paint and enhances that showroom finish.</p>
+                <span class="service-icon">💎</span>
+                <h3>Exterior Detailing</h3>
+                <p>Multi-stage hand wash, wax application, wheel and tire cleaning, brake dust removal, and complete exterior polish.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">🌿</div>
-                <h3>Eco-Friendly</h3>
-                <p>We use biodegradable products and water-saving techniques to protect the environment.</p>
+                <span class="service-icon">🔧</span>
+                <h3>Engine Bay Cleaning</h3>
+                <p>Professional engine compartment detailing to remove dirt, grease, and grime. Makes your engine bay look showroom-ready.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">⚡</div>
-                <h3>Express Service</h3>
-                <p>Need it fast? Our express wash gets you in and out in under 15 minutes without compromising quality.</p>
+                <span class="service-icon">💡</span>
+                <h3>Headlight Restoration</h3>
+                <p>Restore clarity to foggy, yellowed headlights. Improves appearance and nighttime visibility for safer driving.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">🎯</div>
-                <h3>Detail Services</h3>
-                <p>Engine cleaning, headlight restoration, and ceramic coating. Complete care for your vehicle.</p>
+                <span class="service-icon">🛡️</span>
+                <h3>Paint Protection</h3>
+                <p>Ceramic wax coating and paint correction services to protect your vehicle's finish and maintain that showroom shine.</p>
+            </div>
+            <div class="service-card">
+                <span class="service-icon">🌿</span>
+                <h3>Odor Elimination</h3>
+                <p>Professional odor removal treatment to eliminate smoke, pet, mildew, and other persistent odors from your vehicle.</p>
             </div>
         </div>
     </section>
 
     <section id="pricing" class="pricing">
         <h2>Our Packages</h2>
+        <p class="pricing-subtitle">Choose the perfect package for your vehicle</p>
         <div class="pricing-grid">
             <div class="price-card">
-                <h3>Basic</h3>
-                <div class="price">$15</div>
-                <ul>
-                    <li>Exterior Hand Wash</li>
-                    <li>Wheel Cleaning</li>
-                    <li>Window Cleaning</li>
-                    <li>Tire Shine</li>
-                </ul>
-                <a href="#contact" class="cta-button">Book Now</a>
+                <span class="package-badge">Basic</span>
+                <h3>Basic Detail</h3>
+                <p class="vehicle-type">Coupes & Sedans</p>
+                <div class="price">$100</div>
+                <p class="price-subtext">4-5 hours • Complete interior & exterior</p>
+                
+                <div class="features-section">
+                    <h4>Interior Services</h4>
+                    <ul>
+                        <li>Vacuum carpets, mats, and trunk</li>
+                        <li>Deep upholstery & seat cleaning</li>
+                        <li>Dashboard, vents & console steam clean</li>
+                        <li>Interior glass cleaning</li>
+                        <li>Door deep cleaning & cup holders</li>
+                    </ul>
+                </div>
+
+                <div class="features-section">
+                    <h4>Exterior Services</h4>
+                    <ul>
+                        <li>Wheel, rim & tire cleaning</li>
+                        <li>Wheel well wash & brake dust removal</li>
+                        <li>Pre-wash & initial foam coat</li>
+                        <li>Hand wash & wax</li>
+                        <li>Hand dry with air gun</li>
+                        <li>Exterior glass cleaning</li>
+                        <li>Tire shine application</li>
+                        <li>Door trim & wedge cleaning</li>
+                        <li>Fuel filler neck detail</li>
+                        <li>Engine bay wash (optional)</li>
+                    </ul>
+                </div>
+
+                <button class="book-package-btn">Book Basic Package</button>
             </div>
+
             <div class="price-card featured">
-                <h3>Premium</h3>
-                <div class="price">$35</div>
-                <ul>
-                    <li>Everything in Basic</li>
-                    <li>Interior Vacuum</li>
-                    <li>Dashboard Cleaning</li>
-                    <li>Wax Application</li>
-                    <li>Air Freshener</li>
-                </ul>
-                <a href="#contact" class="cta-button">Book Now</a>
+                <span class="package-badge">Most Popular</span>
+                <h3>Extra Basic</h3>
+                <p class="vehicle-type">Trucks & SUVs</p>
+                <div class="price">$125</div>
+                <p class="price-subtext">4-6 hours • Complete interior & exterior</p>
+                
+                <div class="features-section">
+                    <h4>Interior Services</h4>
+                    <ul>
+                        <li>Vacuum carpets, mats, and trunk</li>
+                        <li>Deep upholstery & seat cleaning</li>
+                        <li>Dashboard, vents & console steam clean</li>
+                        <li>Interior glass cleaning</li>
+                        <li>Door deep cleaning & cup holders</li>
+                    </ul>
+                </div>
+
+                <div class="features-section">
+                    <h4>Exterior Services</h4>
+                    <ul>
+                        <li>Wheel, rim & tire cleaning</li>
+                        <li>Wheel well wash & brake dust removal</li>
+                        <li>Pre-wash & initial foam coat</li>
+                        <li>Hand wash & wax</li>
+                        <li>Hand dry with air gun</li>
+                        <li>Exterior glass cleaning</li>
+                        <li>Tire shine application</li>
+                        <li>Door trim & wedge cleaning</li>
+                        <li>Fuel filler neck detail</li>
+                        <li>Engine bay wash (included)</li>
+                    </ul>
+                </div>
+
+                <button class="book-package-btn">Book Extra Basic Package</button>
             </div>
+
             <div class="price-card">
-                <h3>Deluxe</h3>
-                <div class="price">$60</div>
-                <ul>
-                    <li>Everything in Premium</li>
-                    <li>Interior Deep Clean</li>
-                    <li>Leather Conditioning</li>
-                    <li>Engine Bay Wash</li>
-                    <li>Ceramic Coating</li>
-                    <li>Headlight Restoration</li>
-                </ul>
-                <a href="#contact" class="cta-button">Book Now</a>
+                <span class="package-badge">Premium</span>
+                <h3>Premium Detail</h3>
+                <p class="vehicle-type">All Vehicles</p>
+                <div class="price">$150</div>
+                <p class="price-subtext">5-7 hours • Ultimate interior & exterior</p>
+                
+                <div class="features-section">
+                    <h4>Interior Services ($60)</h4>
+                    <ul>
+                        <li>Vacuum carpets, mats, and trunk</li>
+                        <li>Deep upholstery & seat cleaning</li>
+                        <li>Dashboard, vents & console steam clean</li>
+                        <li>Interior glass cleaning</li>
+                        <li>Door deep cleaning & cup holders</li>
+                    </ul>
+                </div>
+
+                <div class="features-section">
+                    <h4>Exterior Services ($60)</h4>
+                    <ul>
+                        <li>Wheel, rim & tire cleaning</li>
+                        <li>Wheel well wash & brake dust removal</li>
+                        <li>Pre-wash & initial foam coat</li>
+                        <li>Hand wash & wax</li>
+                        <li>Hand dry with air gun</li>
+                        <li>Exterior glass cleaning</li>
+                        <li>Tire shine application</li>
+                        <li>Door trim & wedge cleaning</li>
+                        <li>Fuel filler neck detail</li>
+                        <li>Engine bay wash (included)</li>
+                    </ul>
+                </div>
+
+                <button class="book-package-btn">Book Premium Package</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="extras" class="extras">
+        <h2>Add-On Services</h2>
+        <p class="extras-subtitle">Enhance your detail with these premium extras</p>
+        <div class="extras-grid">
+            <div class="extra-card">
+                <div class="extra-info">
+                    <h4>Wet Vacuum</h4>
+                    <p>Deep carpet & seat stain removal</p>
+                </div>
+                <div class="extra-price">$15-20</div>
+            </div>
+            <div class="extra-card">
+                <div class="extra-info">
+                    <h4>Headlight Restoration</h4>
+                    <p>Restore clarity & brightness</p>
+                </div>
+                <div class="extra-price">$30</div>
+            </div>
+            <div class="extra-card">
+                <div class="extra-info">
+                    <h4>Ceramic Wax</h4>
+                    <p>Long-lasting paint protection</p>
+                </div>
+                <div class="extra-price">$10</div>
+            </div>
+            <div class="extra-card">
+                <div class="extra-info">
+                    <h4>Paint Correction + Ceramic</h4>
+                    <p>Remove swirls & scratches</p>
+                </div>
+                <div class="extra-price">$70</div>
+            </div>
+            <div class="extra-card">
+                <div class="extra-info">
+                    <h4>Odor Remover</h4>
+                    <p>Professional odor elimination</p>
+                </div>
+                <div class="extra-price">$50</div>
             </div>
         </div>
     </section>
 
     <section id="contact" class="contact">
-        <h2>Visit Us Today</h2>
+        <h2>Ready to Book?</h2>
         <div class="contact-info">
             <div class="contact-item">
                 <h3>📍 Location</h3>
@@ -430,17 +796,17 @@
             </div>
             <div class="contact-item">
                 <h3>⏰ Hours</h3>
-                <p>Mon-Sat: 8AM - 6PM<br>Sunday: 9AM - 4PM</p>
+                <p>Monday - Saturday<br>8:00 AM - 6:00 PM<br>Sunday: 9:00 AM - 4:00 PM</p>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 Shine Wash. All rights reserved. Making cars shine since 2010.</p>
+        <p>&copy; 2024 Premium Auto Detailing. All rights reserved. Professional car care services.</p>
     </footer>
 
     <script>
-        // Smooth scrolling for navigation links
+        // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -454,7 +820,7 @@
             });
         });
 
-        // Animate elements on scroll
+        // Animate on scroll
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -469,9 +835,9 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.service-card, .price-card').forEach(el => {
+        document.querySelectorAll('.service-card, .price-card, .extra-card').forEach(el => {
             el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
+            el.style.transform = 'translateY(30px)';
             el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(el);
         });
